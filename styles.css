@@ -1,0 +1,190 @@
+/* ===================== HAMBURGUESA ===================== */
+
+/* Oculto por defecto en pantallas grandes */
+.btn-hamburguesa {
+    display: none;
+}
+
+.panel-lateral {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    left: auto;
+    width: 280px;
+    /* background: linear-gradient(135deg, #000000, #010608); */
+    background: linear-gradient(135deg, #d6f0ee, #c8e8f0, #cce4f8);
+    z-index: 300;
+    transition: right 0.3s ease;
+    padding: 20px 0;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.oscuro .panel-lateral {
+    background: linear-gradient(135deg, #000000, #010608);
+    color: #000000;
+}
+
+.panel-lateral.activo {
+    right: 0;
+    left: auto;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+.overlay.activo {
+    display: block;
+}
+
+.btn-cerrar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.btn-cerrar:hover {
+    opacity: 1;
+    transform: none;
+    background: none;
+    box-shadow: none;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li  {
+    display: block;
+    padding: 14px 24px;
+    font-size: 15px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+.nav-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.nav-links li:hover {
+  border-left: 3px solid #ff0048;
+  color: #ff0048;
+  transition: all 0.2s ease;
+} 
+.nav-links a:hover {
+  color: #ff0048;
+} 
+
+
+.oscuro .nav-links a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.oscuro .nav-links li:hover {
+  border-left: 3px solid #ff0048;
+  color: #ff0048;
+  transition: all 0.2s ease;
+} 
+.oscuro .nav-links a:hover {
+  color: #ff0048;
+} 
+
+
+.btn-tema-panel {
+    display: block;
+    width: 100%;
+    padding: 14px 24px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.btn-tema-panel:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1150px) {
+  .principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+  }
+      .nav-left {
+        display: none;
+    }
+
+    .btn-hamburguesa {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        box-shadow: none;
+    }
+
+    .btn-hamburguesa:hover {
+        transform: none;
+        background: none;
+        box-shadow: none;
+    }
+
+    .btn-hamburguesa span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #000000;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .oscuro .btn-hamburguesa span {
+        background-color: #ffffff;
+    }
+
+    .btn-hamburguesa.activo span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .btn-hamburguesa.activo span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .btn-hamburguesa.activo span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+
+
+/* Solo se activa en responsive */
+/* @media (max-width: 768px) {
+
+
+} */

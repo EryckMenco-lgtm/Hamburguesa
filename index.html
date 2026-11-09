@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/calculadora.css">
+    <link rel="icon" href="./favicon/favicon.ico" type="image/png">
+    <script src="./Js/modoOscuro.js" defer></script>
+    <script src="./Js/hamburguesa.js" defer></script>
+    <title>Calculadora De Edad</title>
+</head>
+<body class="oscuro">
+
+    <nav class="cont_nav">
+        <a href="./index.html" id="logo">Eryck Menco</a>
+        <ul class="nav-left">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./imc.html">IMC</a></li>
+            <li><a href="./listaDetareas.html">LISTA DE TAREAS</a></li>
+            <li><a class="active" href="./calculadora.html">CALCULADORA</a></li>
+            <li><button class="btn-tema" onclick="cambiarTema()">🌙</button></li>
+        </ul>
+        <button class="btn-hamburguesa" id="btn-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="panel-lateral" id="panel-lateral">
+        <button class="btn-cerrar" id="btn-cerrar">✕</button>
+        <ul class="nav-links">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./imc.html">IMC</a></li>
+            <li><a href="./listaDetareas.html">LISTA DE TAREAS</a></li>
+            <li><a class="active" href="./calculadora.html">CALCULADORA</a></li>
+            <li><button class="btn-tema-panel" onclick="cambiarTema()">🌙</button></li>
+        </ul>
+    </aside>
