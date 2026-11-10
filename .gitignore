@@ -1,3 +1,6 @@
 .DS_Store
 * 2.*
 .*.icloud
+
+# Documentos md: viven solo en el PC (carpeta md/)
+/md/
